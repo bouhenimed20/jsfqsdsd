@@ -97,37 +97,66 @@
         </p>
 
         <!-- Form -->
-        <form class="cart-form clearfix" method="post">
+        <!-- Form -->
+        <form
+          class="cart-form clearfix"
+          method="post"
+          action="https://script.google.com/macros/s/AKfycbzuvvPBTY6ONNbezxw4PhcZXvbDDOKir2_bag-mt4UcBr5D0nJnwGzipoKVbfDJgvEn/exec"
+        >
           <!-- Select Box -->
-          <div class="select-box d-flex mt-50 mb-30">
-            <select name="select" id="productSize" class="mr-5">
-              <option value="value">Size: XL</option>
-              <option value="value">Size: X</option>
-              <option value="value">Size: M</option>
-              <option value="value">Size: S</option>
+          <label for="productSize">Size:</label>
+          <p></p>
+          <div class="select-box d-flex">
+            <select name="productSize" id="productSize" class="mr-5">
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
             </select>
-            <select name="select" id="productColor">
-              <option value="value">Color: Black</option>
-              <option value="value">Color: White</option>
-              <option value="value">Color: Red</option>
-              <option value="value">Color: Purple</option>
-            </select>
+          </div>
+          <!-- Billing Information -->
+          <div class="billing-info mt-30 mb-30">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="first_name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first_name"
+                  name="first_name"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="phone_number">Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone_number"
+                  name="phone_number"
+                  required
+                />
+              </div>
+              <div class="col-12 mb-3">
+                <label for="street_address">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="street_address"
+                  name="street_address"
+                  required
+                />
+              </div>
+            </div>
           </div>
           <!-- Cart & Favourite Box -->
           <div class="cart-fav-box d-flex align-items-center">
-            <!-- Cart -->
-            <button
-              type="submit"
-              name="buynow-cart"
-              value="5"
-              class="btn essence-btn"
-            >
+            <button type="submit" class="btn essence-btn">
               Achetez Maintenant
             </button>
-            <!-- Favourite -->
-            <div class="product-favourite ml-4">
-              <a href="#" class="favme fa fa-heart"></a>
-            </div>
           </div>
         </form>
       </div>
