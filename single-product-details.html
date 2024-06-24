@@ -107,18 +107,17 @@
           <label for="productSize">Size:</label>
           <p></p>
           <div class="select-box d-flex">
-            <select name="productSize" id="productSize" class="mr-5">
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
+            <select name="productSize" class="mr-5">
+              <option value="37">Taille: 37</option>
+              <option value="38">Taille: 38</option>
+              <option value="39">Taille: 39</option>
+              <option value="40">Taille: 40</option>
+              <option value="41">Taille: 41</option>
+              <option value="42">Taille: 42</option>
+              <option value="43">Taille: 43</option>
             </select>
           </div>
-          <!-- Billing Information -->
-          <div class="billing-info mt-30 mb-30">
+          <div class="billing-info mt-20 mb-30">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="first_name">Name</label>
@@ -127,6 +126,7 @@
                   class="form-control"
                   id="first_name"
                   name="first_name"
+                  value=""
                   required
                 />
               </div>
@@ -137,6 +137,7 @@
                   class="form-control"
                   id="phone_number"
                   name="phone_number"
+                  value=""
                   required
                 />
               </div>
@@ -144,17 +145,22 @@
                 <label for="street_address">Address</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control mb-3"
                   id="street_address"
                   name="street_address"
+                  value=""
                   required
                 />
               </div>
             </div>
           </div>
-          <!-- Cart & Favourite Box -->
           <div class="cart-fav-box d-flex align-items-center">
-            <button type="submit" class="btn essence-btn">
+            <button
+              type="submit"
+              name="buynow-cart"
+              value="5"
+              class="btn essence-btn"
+            >
               Achetez Maintenant
             </button>
           </div>
