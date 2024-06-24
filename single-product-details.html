@@ -101,12 +101,11 @@
         <form
           class="cart-form clearfix"
           method="post"
-          action="https://script.google.com/macros/s/AKfycbzuvvPBTY6ONNbezxw4PhcZXvbDDOKir2_bag-mt4UcBr5D0nJnwGzipoKVbfDJgvEn/exec"
+          action="YOUR_WEB_APP_URL"
         >
           <!-- Select Box -->
-          <label for="productSize">Size:</label>
-          <p></p>
           <div class="select-box d-flex">
+            <label for="productSize">Size:</label>
             <select name="productSize" id="productSize" class="mr-5">
               <option value="37">37</option>
               <option value="38">38</option>
@@ -116,9 +115,16 @@
               <option value="42">42</option>
               <option value="43">43</option>
             </select>
+            <label for="productColor">Color:</label>
+            <select name="productColor" id="productColor">
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Red">Red</option>
+              <option value="Purple">Purple</option>
+            </select>
           </div>
           <!-- Billing Information -->
-          <div class="billing-info mt-30 mb-30">
+          <div class="billing-info mt-20 mb-30">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="first_name">Name</label>
