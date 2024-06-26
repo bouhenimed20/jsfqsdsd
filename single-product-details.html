@@ -19,6 +19,7 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
+
     <script>
       function handleFormSubmit(event) {
         event.preventDefault();
@@ -42,6 +43,29 @@
             alert("thanks for purchasing our product ");
           });
       }
+      function validateForm() {
+        const phoneNumber = document.getElementById("phone_number").value;
+        const phoneNumberError = document.getElementById("phone_number_error");
+
+        const isNumeric = /^\d+$/.test(phoneNumber);
+        if (!isNumeric) {
+          phoneNumberError.style.display = "block";
+          return false;
+        } else {
+          phoneNumberError.style.display = "none";
+        }
+        return true;
+      }
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document
+          .getElementById("phone_number")
+          .addEventListener("input", function () {
+            const phoneNumberError =
+              document.getElementById("phone_number_error");
+            phoneNumberError.style.display = "none";
+          });
+      });
     </script>
   </head>
 
@@ -156,15 +180,19 @@
                 />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="phone_number">Phone Number</label>
+                <label for="phone_number">Numéro du telephone</label>
                 <input
                   type="text"
                   class="form-control"
                   id="phone_number"
                   name="phone_number"
-                  value=""
+                  pattern="\d*"
+                  inputmode="numeric"
                   required
                 />
+                <small id="phone_number_error" style="color: red; display: none"
+                  >Entrez votre numéro de téléphone</small
+                >
               </div>
               <div class="col-12 mb-3">
                 <label for="street_address">Address</label>
