@@ -19,7 +19,62 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
+<script>
+  const notifications = [
+    {
+        name: "Kate (Tunis)",
+        product: "TRAVIS SCOTT X AIR JORDAN 1 LOW",
+        time: "40 minutes ago",
+        img: "path/to/product-image.jpg",
+        verifiedImg: "path/to/verified-icon.png"
+    },
+    // Add more notifications if needed
+];
 
+function showNotification() {
+    const container = document.getElementById('notification-container');
+    const notificationData = notifications[Math.floor(Math.random() * notifications.length)];
+    
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+
+    notification.innerHTML = `
+        <img src="${notificationData.img}" alt="Product">
+        <div class="content">
+            <h4>${notificationData.name} purchased</h4>
+            <p>${notificationData.product}</p>
+            <div class="verified">
+                <span>${notificationData.time}</span>
+                <img src="${notificationData.verifiedImg}" alt="Verified">
+            </div>
+        </div>
+        <span class="close-btn">&times;</span>
+    `;
+
+    container.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            container.removeChild(notification);
+        }, 300);
+    }, 3000);
+
+    notification.querySelector('.close-btn').addEventListener('click', () => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            container.removeChild(notification);
+        }, 500);
+    });
+}
+
+setInterval(showNotification, 10000);
+
+</script>
     <script>
       function handleFormSubmit(event) {
         event.preventDefault();
@@ -79,6 +134,8 @@
   </head>
 
   <body>
+    <div id="notification-container"></div>
+
     <!-- ##### Header Area Start ##### -->
     <header class="header_area">
       <div
