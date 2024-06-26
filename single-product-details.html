@@ -19,6 +19,69 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      #notification-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.notification img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.notification .content {
+  flex: 1;
+}
+
+.notification .content h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notification .content p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: gray;
+}
+
+.notification .content .verified {
+  display: flex;
+  align-items: center;
+}
+
+.notification .content .verified img {
+  width: 12px;
+  height: auto;
+  margin-left: 5px;
+}
+
+.notification .close-btn {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+    </style>
 <script>
   const notifications = [
     {
