@@ -1,60 +1,18 @@
-#notification-container {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 1000;
-}
-
-.notification {
+/* Centering the logo in the navbar */
+.classy-navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
+  padding: 0;
 }
 
-.notification img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
+/* Adjusting the padding and margin for the mobile version */
+@media (max-width: 468px) {
+  .classy-navbar {
+    padding: 0; /* Adjust the padding to remove unnecessary space */
+  }
 
-.notification .content {
-  flex: 1;
-}
-
-.notification .content h4 {
-  margin: 0;
-  font-size: 14px;
-}
-
-.notification .content p {
-  margin: 5px 0;
-  font-size: 12px;
-  color: gray;
-}
-
-.notification .content .verified {
-  display: flex;
-  align-items: center;
-}
-
-.notification .content .verified img {
-  width: 12px;
-  height: auto;
-  margin-left: 5px;
-}
-
-.notification .close-btn {
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.notification.show {
-  opacity: 1;
+  .nav-brand {
+    margin: 0 auto; /* Center the logo by setting the margin to auto */
+  }
 }
