@@ -89,7 +89,6 @@
         product: "Nike SB Dunk Low Travis Scott",
         time: "40 minutes ago",
         img: "img/product-img/1.jpg",
-        verifiedImg: "path/to/verified-icon.png"
     },
     // Add more notifications if needed
 ];
@@ -117,7 +116,7 @@ function showNotification() {
 
     setTimeout(() => {
         notification.classList.add('show');
-    }, 100);
+    }, 50);
 
     setTimeout(() => {
         notification.classList.remove('show');
@@ -130,11 +129,11 @@ function showNotification() {
         notification.classList.remove('show');
         setTimeout(() => {
             container.removeChild(notification);
-        }, 500);
+        }, 300);
     });
 }
 
-setInterval(showNotification, 10000);
+setInterval(showNotification, 3000);
 
 </script>
     <script>
