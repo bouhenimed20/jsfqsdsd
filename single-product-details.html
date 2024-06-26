@@ -19,6 +19,30 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.result === "success") {
+              window.location.href = "thankyou.html"; // Redirect to thank you page
+            } else {
+              window.location.href = "thankyou.html"; // Redirect to thank you page
+            }
+          })
+          .catch((error) => {
+            alert("thanks for purchasing our product ");
+          });
+      }
+    </script>
   </head>
 
   <body>
@@ -102,6 +126,7 @@
           class="cart-form clearfix"
           method="post"
           action="https://script.google.com/macros/s/AKfycbxPDLh_WmwrDiu7Y2XhGSnmWF2J8jU9Fo2xH25xymOGAmuAf0RbEsF1PpBxIDFtXs_M/exec"
+          onsubmit="handleFormSubmit(event)"
         >
           <!-- Select Box -->
           <label for="productSize">Size:</label>
