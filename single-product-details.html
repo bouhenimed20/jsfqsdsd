@@ -270,10 +270,16 @@ setInterval(showNotification, 11000);
           onsubmit="handleFormSubmit(event)"
         >
           <!-- Select Box -->
-          <label for="productSize">Size:</label>
-          <p></p>
+          
+          <div class="billing-info mt-20 mb-30">
+            
+            <div class="row">
+              <div class="col-12 mb-3">
+
+              <label for="productSize">Size:</label>
+          
           <div class="select-box d-flex">
-            <select name="productSize" class="mr-5">
+            <select name="productSize" class="mr-22">
               <option value="37">Taille: 37</option>
               <option value="38">Taille: 38</option>
               <option value="39">Taille: 39</option>
@@ -283,8 +289,7 @@ setInterval(showNotification, 11000);
               <option value="43">Taille: 43</option>
             </select>
           </div>
-          <div class="billing-info mt-20 mb-30">
-            <div class="row">
+              </div>
               <div class="col-md-6 mb-3">
                 <label for="first_name">Name</label>
                 <input
@@ -323,22 +328,44 @@ setInterval(showNotification, 11000);
                 />
               </div>
             </div>
+            <div class="cart-fav-box d-flex align-items-center">
+              <button
+                type="submit"
+                name="buynow-cart"
+                value="5"
+                class="btn essence-btn" style="background-color: #000000;
+                "
+              >
+                Achetez Maintenant
+              </button>
+            </div>
           </div>
-          <div class="cart-fav-box d-flex align-items-center">
-            <button
-              type="submit"
-              name="buynow-cart"
-              value="5"
-              class="btn essence-btn"
-            >
-              Achetez Maintenant
-            </button>
-          </div>
+         
         </form>
       </div>
     </section>
     <!-- ##### Single Product Details Area End ##### -->
+    <p></p>
+    <p></p>
 
+ <!-- ##### Single Product Details Area Start ##### -->
+ <section class="single_product_details_area d-flex align-items-center">
+  <!-- Single Product Thumb -->
+  <div class="single_product_thumb clearfix">
+
+
+    </div>
+  </div>
+    <!-- Single Product Description -->
+    <div class="single_product_desc clearfix">
+      <span>Nike</span>
+      <a>
+        <h2>Nike SB Dunk Low Travis Scott
+        </h2>
+      </a>
+      <iframe src="https://giphy.com/embed/kBEjArfebPx6GWId3T" width="760px" height="760px" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Colors-sneakers-kBEjArfebPx6GWId3T"></a></p>
+
+  </section>
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer_area clearfix">
       <div class="container">
