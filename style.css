@@ -31,11 +31,15 @@
   justify-content: space-around;
   background-color: #f9f9f9;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .benefit {
   text-align: center;
   padding: 20px;
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
 }
 
 .benefit-icon {
@@ -52,4 +56,11 @@
 .benefit p {
   font-size: 16px;
   color: #888888;
+}
+
+@media (max-width: 768px) {
+  .benefit {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
