@@ -69,17 +69,16 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #000000;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 0;
-  border-radius: 3px;
   z-index: 1000; /* Ensures it stays on top */
   text-decoration: none; /* Remove underline from link */
 }
 
 .sticky-bar:hover {
-  background-color: #000000; /* Darker background color on hover */
+  background-color: #444; /* Darker background color on hover */
 }
 
 .buy-now-text {
@@ -92,7 +91,7 @@
 }
 
 .checkbox-item {
-  display: inline-block; /* Ensuring proper display */
+  display: flow;
   align-items: center;
   justify-content: center;
   font-size: 16px;
@@ -105,19 +104,26 @@
   width: 40px; /* Adjust width as needed */
   height: 40px; /* Adjust height as needed */
   text-align: center;
-  transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
 }
 
 .checkbox-item input[type="checkbox"] {
-  display: none; /* Hiding the actual checkbox */
+  display: none;
 }
 
 .checkbox-item:hover {
-  text-emphasis-color: white;
-  background: #1f1f1f; /* Hover background color */
+  background: #f0f0f0; /* Add a hover effect */
 }
 
+.checkbox-item input[type="checkbox"]:checked + label,
 .checkbox-item input[type="checkbox"]:checked + .checkbox-item {
-  background: #000; /* Checked background color */
-  color: #fff; /* Checked text color */
+  background: #000; /* Change background when checked */
+  color: #fff; /* Change text color when checked */
+}
+
+.checkbox-item span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
