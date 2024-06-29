@@ -80,31 +80,15 @@
     </style>
   </head>
   <body>
-    <!-- Your other content -->
-
     <!-- Sticky Bar -->
-    <div class="sticky-bar">
-      <button
-        class="buy-now-btn"
-        onclick="window.location.href='#buy-now-section'"
-      >
-        Buy Now
-      </button>
-    </div>
-
-    <!-- Your other content -->
-
-    <!-- Sticky Bar -->
-    <a href="#buy-now-section" class="sticky-bar">
-      <div class="buy-now-text">Buy Now</div>
+    <a href="#check" class="sticky-bar">
+      <div class="buy-now-text">Passez Votre Commande Maintenant</div>
     </a>
 
     <!-- The section you want to navigate to -->
     <div id="buy-now-section">
       <!-- Your buy now section content here -->
     </div>
-
-    <!-- Your other content -->
 
     <div id="notification-container"></div>
     <header class="header_area">
@@ -133,7 +117,7 @@
         <a>
           <h2>Nike SB Dunk Low Travis Scott</h2>
         </a>
-        <p class="product-price">
+        <p class="product-price" id="check">
           <span class="old-price">279.00dt</span> 229.00dt
         </p>
         <p class="product-desc">
@@ -150,17 +134,35 @@
             <div class="row">
               <div class="col-12 mb-3">
                 <label for="productSize">Taille:</label>
-                <div class="select-box d-flex">
-                  <select name="productSize" class="mr-22" required>
-                    <option value="">Choisir Votre Taille</option>
-                    <option value="37">Taille: 37</option>
-                    <option value="38">Taille: 38</option>
-                    <option value="39">Taille: 39</option>
-                    <option value="40">Taille: 40</option>
-                    <option value="41">Taille: 41</option>
-                    <option value="42">Taille: 42</option>
-                    <option value="43">Taille: 43</option>
-                  </select>
+                <div class="checkbox-list">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="37" />
+                    <span>37</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="38" />
+                    <span>38</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="39" />
+                    <span>39</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="40" />
+                    <span>40</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="41" />
+                    <span>41</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="42" />
+                    <span>42</span>
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="productSize" value="43" />
+                    <span>43</span>
+                  </label>
                 </div>
               </div>
               <div class="col-md-6 mb-3">

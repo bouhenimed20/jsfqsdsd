@@ -69,18 +69,55 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 15px 0;
+  border-radius: 3px;
   z-index: 1000; /* Ensures it stays on top */
   text-decoration: none; /* Remove underline from link */
 }
 
 .sticky-bar:hover {
-  background-color: #444; /* Darker background color on hover */
+  background-color: #000000; /* Darker background color on hover */
 }
 
 .buy-now-text {
   font-size: 18px;
+}
+.checkbox-list {
+  display: flex;
+  gap: 10px; /* Adjust spacing between checkboxes as needed */
+  margin-top: 10px; /* Add margin for better spacing */
+}
+
+.checkbox-item {
+  display: inline-block; /* Ensuring proper display */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
+}
+
+.checkbox-item input[type="checkbox"] {
+  display: none; /* Hiding the actual checkbox */
+}
+
+.checkbox-item:hover {
+  text-emphasis-color: white;
+  background: #1f1f1f; /* Hover background color */
+}
+
+.checkbox-item input[type="checkbox"]:checked + .checkbox-item {
+  background: #000; /* Checked background color */
+  color: #fff; /* Checked text color */
 }
