@@ -16,3 +16,13 @@
 #fixed-buy-button-container .essence-btn:hover {
   background-color: #333333;
 }
+/* stt.css */
+
+.essence-btn {
+  background-color: #000000 !important;
+}
+
+.essence-btn:hover,
+.essence-btn:focus {
+  color: #4a4a4a; /* Assuming $white-color is a variable in Sass; replace with actual color if necessary */
+}

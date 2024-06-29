@@ -158,7 +158,9 @@
                   inputmode="numeric"
                   required
                 />
-                <small id="phone_number_error" style="color: red; display: none"
+                <small
+                  id="phone_number_error"
+                  style="color: rgb(0, 0, 0); display: none"
                   >Entrez votre numéro de téléphone</small
                 >
               </div>
@@ -180,7 +182,6 @@
                 name="buynow-cart"
                 value="5"
                 class="btn essence-btn"
-                style="background-color: #000000"
               >
                 Achetez Maintenant
               </button>
@@ -289,9 +290,8 @@
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart-o" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              All rights reserved
+              <a href="https://ozlo.tn" target="_blank">Dicod Agency</a>
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@
         debug: false,
         newestOnTop: true,
         progressBar: true,
-        positionClass: "toast-bottom-full-width",
+        positionClass: "toast-top-full-width",
         preventDuplicates: false,
         onclick: null,
         showDuration: "300",
@@ -325,7 +325,7 @@
       };
 
       function handleFormSubmit(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
+        event.preventDefault();
 
         var form = event.target;
         var formData = new FormData(form);
