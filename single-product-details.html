@@ -8,196 +8,70 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
     <title>Ozlo</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.png" /> 
-
-    <!-- Core Style CSS -->
+    <link rel="icon" href="img/core-img/favicon.png" />
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
     <style>
       #notification-container {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 1000;
-}
-
-.notification {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
-}
-
-.notification img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.notification .content {
-  flex: 1;
-}
-
-.notification .content h4 {
-  margin: 0;
-  font-size: 14px;
-}
-
-.notification .content p {
-  margin: 5px 0;
-  font-size: 12px;
-  color: gray;
-}
-
-.notification .content .verified {
-  display: flex;
-  align-items: center;
-}
-
-.notification .content .verified img {
-  width: 12px;
-  height: auto;
-  margin-left: 5px;
-}
-
-.notification .close-btn {
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.notification.show {
-  opacity: 1;
-}
-
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1000;
+      }
+      .notification {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+      }
+      .notification img {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
+      .notification .content {
+        flex: 1;
+      }
+      .notification .content h4 {
+        margin: 0;
+        font-size: 14px;
+      }
+      .notification .content p {
+        margin: 5px 0;
+        font-size: 12px;
+        color: gray;
+      }
+      .notification .content .verified {
+        display: flex;
+        align-items: center;
+      }
+      .notification .content .verified img {
+        width: 12px;
+        height: auto;
+        margin-left: 5px;
+      }
+      .notification .close-btn {
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      .notification.show {
+        opacity: 1;
+      }
     </style>
-<script>
-const notifications = [
-    {
-        product: "Nike SB Dunk Low Travis Scott",
-        time: "1 second ago",
-        img: "img/product-img/1.jpg",
-    },
-    // Add more products if needed
-];
-
-const names = [
-    "Mohamed Bo****",
-    "Salim Ab***",
-    "Salwa Be****",
-    "Marwen Ar**"
-    // Add more names if needed
-];
-
-function getRandomName() {
-    return names[Math.floor(Math.random() * names.length)];
-}
-
-function showNotification() {
-    const container = document.getElementById('notification-container');
-    const notificationData = notifications[Math.floor(Math.random() * notifications.length)];
-    
-    const notification = document.createElement('div');
-    notification.className = 'notification';
-
-    notification.innerHTML = `
-        <img src="${notificationData.img}" alt="Product">
-        <div class="content">
-            <h4>${getRandomName()} purchased</h4>
-            <p>${notificationData.product}</p>
-            <div class="verified">
-                <span>${notificationData.time}</span>
-            </div>
-        </div>
-        <span class="close-btn">&times;</span>
-    `;
-
-    container.appendChild(notification);
-
-    setTimeout(() => {
-        notification.classList.add('show');
-    }, 50);
-
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-            container.removeChild(notification);
-        }, 300);
-    }, 4000);
-
-    notification.querySelector('.close-btn').addEventListener('click', () => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-            container.removeChild(notification);
-        }, 300);
-    });
-}
-
-setInterval(showNotification, 11000);
-
-
-</script>
-    <script>
-      function handleFormSubmit(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.result === "success") {
-              window.location.href = "thankyou.html"; // Redirect to thank you page
-            } else {
-              window.location.href = "thankyou.html"; // Redirect to thank you page
-            }
-          })
-          .catch((error) => {
-            alert("thanks for purchasing our product ");
-          });
-      }
-      function validateForm() {
-        const phoneNumber = document.getElementById("phone_number").value;
-        const phoneNumberError = document.getElementById("phone_number_error");
-
-        const isNumeric = /^\d+$/.test(phoneNumber);
-        if (!isNumeric) {
-          phoneNumberError.style.display = "block";
-          return false;
-        } else {
-          phoneNumberError.style.display = "none";
-        }
-        return true;
-      }
-
-      document.addEventListener("DOMContentLoaded", (event) => {
-        document
-          .getElementById("phone_number")
-          .addEventListener("input", function () {
-            const phoneNumberError =
-              document.getElementById("phone_number_error");
-            phoneNumberError.style.display = "none";
-          });
-      });
-    </script>
     <style>
       @media (max-width: 991px) {
-        /* Hide the menu icon and cart area */
         .classy-navbar-toggler,
         .cart-area {
           display: none !important;
@@ -205,33 +79,20 @@ setInterval(showNotification, 11000);
       }
     </style>
   </head>
-
   <body>
     <div id="notification-container"></div>
-
-    <!-- ##### Header Area Start ##### -->
     <header class="header_area">
       <div
         class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between"
       >
-        <!-- Classy Menu -->
         <nav class="classy-navbar" id="essenceNav">
-          <!-- Logo -->
           <a class="nav-brand" href="index.html"
             ><img src="img/core-img/logo.png" alt=""
           /></a>
-          
-          
-            
-          </div>
         </nav>
-
-       
+      </div>
     </header>
-
-    <!-- ##### Single Product Details Area Start ##### -->
     <section class="single_product_details_area d-flex align-items-center">
-      <!-- Single Product Thumb -->
       <div class="single_product_thumb clearfix">
         <div class="product_thumbnail_slides owl-carousel">
           <img src="img/product-img/1.jpg" alt="" />
@@ -239,56 +100,41 @@ setInterval(showNotification, 11000);
           <img src="img/product-img/3.jpg" alt="" />
           <img src="img/product-img/4.jpg" alt="" />
           <img src="img/product-img/5.jpg" alt="" />
-
-
         </div>
       </div>
-
-      <!-- Single Product Description -->
       <div class="single_product_desc clearfix">
         <span>Nike</span>
         <a>
-          <h2>Nike SB Dunk Low Travis Scott
-          </h2>
+          <h2>Nike SB Dunk Low Travis Scott</h2>
         </a>
         <p class="product-price">
           <span class="old-price">279.00dt</span> 229.00dt
         </p>
         <p class="product-desc">
-          Sku : CT5053-001
-          Release date : February 2020
-          Colorway : BLACK/BLACK/PARACHUTE BEIGE/Petra BROWN
-          Color : Beige/Multicolor
+          Sku : CT5053-001 Release date : February 2020 Colorway :
+          BLACK/BLACK/PARACHUTE BEIGE/Petra BROWN Color : Beige/Multicolor
         </p>
-
-        <!-- Form -->
-        <!-- Form -->
         <form
           class="cart-form clearfix"
           method="post"
           action="https://script.google.com/macros/s/AKfycbwRr5aumjPMmqPINI1skxmzkTs9mUTlosvCrs8ERen1iM2atqIT-FxiU_CMIKcX5tkt/exec"
           onsubmit="handleFormSubmit(event)"
         >
-          <!-- Select Box -->
-          
           <div class="billing-info mt-20 mb-30">
-            
             <div class="row">
               <div class="col-12 mb-3">
-
-              <label for="productSize">Size:</label>
-          
-          <div class="select-box d-flex">
-            <select name="productSize" class="mr-22">
-              <option value="37">Taille: 37</option>
-              <option value="38">Taille: 38</option>
-              <option value="39">Taille: 39</option>
-              <option value="40">Taille: 40</option>
-              <option value="41">Taille: 41</option>
-              <option value="42">Taille: 42</option>
-              <option value="43">Taille: 43</option>
-            </select>
-          </div>
+                <label for="productSize">Size:</label>
+                <div class="select-box d-flex">
+                  <select name="productSize" class="mr-22">
+                    <option value="37">Taille: 37</option>
+                    <option value="38">Taille: 38</option>
+                    <option value="39">Taille: 39</option>
+                    <option value="40">Taille: 40</option>
+                    <option value="41">Taille: 41</option>
+                    <option value="42">Taille: 42</option>
+                    <option value="43">Taille: 43</option>
+                  </select>
+                </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="first_name">Name</label>
@@ -333,51 +179,24 @@ setInterval(showNotification, 11000);
                 type="submit"
                 name="buynow-cart"
                 value="5"
-                class="btn essence-btn" style="background-color: #000000;
-                "
+                class="btn essence-btn"
+                style="background-color: #000000"
               >
                 Achetez Maintenant
               </button>
             </div>
           </div>
-         
         </form>
       </div>
     </section>
-    <!-- ##### Single Product Details Area End ##### -->
-    <p></p>
-    <p></p>
-
- <!-- ##### Single Product Details Area Start ##### -->
- <section class="single_product_details_area d-flex align-items-center">
-  <!-- Single Product Thumb -->
-  <div class="single_product_thumb clearfix">
-
-
-    </div>
-  </div>
-    <!-- Single Product Description -->
-    <div class="single_product_desc clearfix">
-      <span>Nike</span>
-      <a>
-        <h2>Nike SB Dunk Low Travis Scott
-        </h2>
-      </a>
-      <iframe src="https://giphy.com/embed/kBEjArfebPx6GWId3T"   class="single_product_thumb" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Colors-sneakers-kBEjArfebPx6GWId3T"></a></p>
-
-  </section>
-    <!-- ##### Footer Area Start ##### -->
     <footer class="footer_area clearfix">
       <div class="container">
         <div class="row">
-          <!-- Single Widget Area -->
           <div class="col-12 col-md-6">
             <div class="single_widget_area d-flex mb-30">
-              <!-- Logo -->
               <div class="footer-logo mr-50">
                 <a href="#"><img src="img/core-img/logo2.png" alt="" /></a>
               </div>
-              <!-- Footer Menu -->
               <div class="footer_menu">
                 <ul>
                   <li><a href="shop.html">Shop</a></li>
@@ -387,7 +206,6 @@ setInterval(showNotification, 11000);
               </div>
             </div>
           </div>
-          <!-- Single Widget Area -->
           <div class="col-12 col-md-6">
             <div class="single_widget_area mb-30">
               <ul class="footer_widget_menu">
@@ -401,9 +219,7 @@ setInterval(showNotification, 11000);
             </div>
           </div>
         </div>
-
         <div class="row align-items-end">
-          <!-- Single Widget Area -->
           <div class="col-12 col-md-6">
             <div class="single_widget_area">
               <div class="footer_heading mb-30">
@@ -424,7 +240,6 @@ setInterval(showNotification, 11000);
               </div>
             </div>
           </div>
-          <!-- Single Widget Area -->
           <div class="col-12 col-md-6">
             <div class="single_widget_area">
               <div class="footer_social_area">
@@ -467,30 +282,57 @@ setInterval(showNotification, 11000);
             </div>
           </div>
         </div>
-
         <div class="row mt-5">
           <div class="col-md-12 text-center">
             <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
+              &copy;
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              All rights reserved |
-              <a href="https://ozlo.tn/" target="_blank">Ozlo Tunisie</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              All rights reserved | This template is made with
+              <i class="fa fa-heart-o" aria-hidden="true"></i> by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
             </p>
           </div>
         </div>
       </div>
     </footer>
-    <!-- ##### Footer Area End ##### -->
-
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/classy-nav.min.js"></script>
     <script src="js/active.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        var form = event.target;
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            console.log("Response status:", response.status);
+            return response.text(); // Convert the response to text
+          })
+          .then((responseText) => {
+            console.log("Response body:", responseText);
+
+            if (response.ok) {
+              toastr.success("Votre commande a été reçue!");
+            } else {
+              toastr.error("Erreur lors de la soumission du formulaire.");
+            }
+          })
+          .catch((error) => {
+            console.error("Fetch error:", error);
+            toastr.success("Votre commande a été reçue!");
+          });
+      }
+    </script>
   </body>
 </html>
