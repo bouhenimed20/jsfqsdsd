@@ -123,9 +123,10 @@
           <div class="billing-info mt-20 mb-30">
             <div class="row">
               <div class="col-12 mb-3">
-                <label for="productSize">Size:</label>
+                <label for="productSize">Taille:</label>
                 <div class="select-box d-flex">
-                  <select name="productSize" class="mr-22">
+                  <select name="productSize" class="mr-22" required>
+                    <option value="">Choisir Votre Taille</option>
                     <option value="37">Taille: 37</option>
                     <option value="38">Taille: 38</option>
                     <option value="39">Taille: 39</option>
@@ -137,7 +138,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="first_name">Name</label>
+                <label for="first_name">Nom et Prenom :</label>
                 <input
                   type="text"
                   class="form-control"
@@ -148,7 +149,7 @@
                 />
               </div>
               <div class="col-md-6 mb-3">
-                <label for="phone_number">Numéro du telephone</label>
+                <label for="phone_number">Numéro du telephone :</label>
                 <input
                   type="text"
                   class="form-control"
@@ -158,14 +159,9 @@
                   inputmode="numeric"
                   required
                 />
-                <small
-                  id="phone_number_error"
-                  style="color: rgb(0, 0, 0); display: none"
-                  >Entrez votre numéro de téléphone</small
-                >
               </div>
               <div class="col-12 mb-3">
-                <label for="street_address">Address</label>
+                <label for="street_address">Adresse de livraison :</label>
                 <input
                   type="text"
                   class="form-control mb-3"
@@ -188,6 +184,42 @@
             </div>
           </div>
         </form>
+      </div>
+    </section>
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+
+    <section class="single_product_details_area d-flex align-items-center">
+      <div class="single_product_desc clearfix">
+        <span>Nike</span>
+        <a>
+          <h2>Nike SB Dunk Low Travis Scott</h2>
+        </a>
+        <p class="product-price">
+          <span class="old-price">279.00dt</span> 229.00dt
+        </p>
+        <p class="product-desc">
+          Sku : CT5053-001 Release date : February 2020 Colorway :
+          BLACK/BLACK/PARACHUTE BEIGE/Petra BROWN Color : Beige/Multicolor
+        </p>
+        <form></form>
+      </div>
+      <div class="single_product_thumb clearfix">
+          <img src="img/product-img/2.jpg" alt="" />
+         
+        </div>
       </div>
     </section>
     <footer class="footer_area clearfix">
