@@ -26,3 +26,30 @@
 .essence-btn:focus {
   color: #4a4a4a; /* Assuming $white-color is a variable in Sass; replace with actual color if necessary */
 }
+.benefits-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.benefit {
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.benefit h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  font-size: 16px;
+  color: #888888;
+}
