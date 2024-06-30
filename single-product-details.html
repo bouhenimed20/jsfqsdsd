@@ -127,42 +127,28 @@
         <form
           class="cart-form clearfix"
           method="post"
-          action="https://script.google.com/macros/s/AKfycbwRr5aumjPMmqPINI1skxmzkTs9mUTlosvCrs8ERen1iM2atqIT-FxiU_CMIKcX5tkt/exec"
+          action="https://script.google.com/macros/s/AKfycbyNyFSPwqhebqAMiqtng1kN9s9bb9Vo7U2XAziUrJw1two-Tatp1MEXoknu5SEzbSzv/exec"
           onsubmit="handleFormSubmit(event)"
         >
           <div class="billing-info mt-20 mb-30">
             <div class="row">
               <div class="col-12 mb-3">
-                <label for="productSize">Taille:</label>
-                <div class="checkbox-list">
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="37" />
-                    <span>37</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="38" />
-                    <span>38</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="39" />
-                    <span>39</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="40" />
-                    <span>40</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="41" />
-                    <span>41</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="42" />
-                    <span>42</span>
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="productSize" value="43" />
-                    <span>43</span>
-                  </label>
+                <label for="size">Taille:</label>
+                <div class="size-selector">
+                  <input
+                    type="radio"
+                    id="size-40"
+                    name="size"
+                    value="40"
+                    checked
+                  />
+                  <label for="size-40">40</label>
+                  <input type="radio" id="size-41" name="size" value="41" />
+                  <label for="size-41">41</label>
+                  <input type="radio" id="size-42" name="size" value="42" />
+                  <label for="size-42">42</label>
+                  <input type="radio" id="size-43" name="size" value="43" />
+                  <label for="size-43">43</label>
                 </div>
               </div>
               <div class="col-md-6 mb-3">
@@ -280,7 +266,6 @@
           Sku : CT5053-001 Release date : February 2020 Colorway :
           BLACK/BLACK/PARACHUTE BEIGE/Petra BROWN Color : Beige/Multicolor
         </p>
-        <form></form>
       </div>
       <div class="single_product_thumb clearfix">
         <div

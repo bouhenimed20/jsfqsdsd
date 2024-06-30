@@ -84,46 +84,37 @@
 .buy-now-text {
   font-size: 18px;
 }
-.checkbox-list {
+.stock-notice {
+  margin-bottom: 20px;
+}
+.stock-notice .highlight {
+  color: red;
+}
+.size-selector {
   display: flex;
-  gap: 10px; /* Adjust spacing between checkboxes as needed */
-  margin-top: 10px; /* Add margin for better spacing */
-}
-
-.checkbox-item {
-  display: flow;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: 500;
-  background: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 40px; /* Adjust width as needed */
-  height: 40px; /* Adjust height as needed */
-  text-align: center;
 }
-
-.checkbox-item input[type="checkbox"] {
+.size-selector span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.size-selector label {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+.size-selector input[type="radio"] {
   display: none;
 }
-
-.checkbox-item:hover {
-  background: #f0f0f0; /* Add a hover effect */
-}
-
-.checkbox-item input[type="checkbox"]:checked + label,
-.checkbox-item input[type="checkbox"]:checked + .checkbox-item {
-  background: #000; /* Change background when checked */
-  color: #fff; /* Change text color when checked */
-}
-
-.checkbox-item span {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.size-selector input[type="radio"]:checked + label {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
 }
