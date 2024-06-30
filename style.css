@@ -69,7 +69,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 15px 0;
@@ -78,7 +78,12 @@
 }
 
 .sticky-bar:hover {
-  background-color: #444; /* Darker background color on hover */
+  background-color: #ffffff;
+  color: black;
+  border-color: #000000;
+  border-radius: 4px;
+  box-shadow: #010101;
+  /* Darker background color on hover */
 }
 
 .buy-now-text {

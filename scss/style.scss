@@ -1124,35 +1124,7 @@ img {
       right: 30px;
     }
   }
-  .single_product_desc {
-    position: relative;
-    z-index: 1;
-    padding: 20px 5%;
-    @media #{$breakpoint-lg} {
-      padding: 10px 4%;
-    }
-    @media #{$breakpoint-md} {
-      padding: 10px 3%;
-    }
-    span {
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: $text-color;
-      margin-bottom: 10px;
-      display: block;
-    }
-    a > h2 {
-      font-size: 30px;
-      display: block;
-      margin-bottom: 10px;
-      @media #{$breakpoint-lg} {
-        font-size: 24px;
-      }
-      @media #{$breakpoint-md} {
-        font-size: 20px;
-      }
-    }
+  
     .product-price {
       margin-bottom: 0;
       font-family: $font-ubuntu;
