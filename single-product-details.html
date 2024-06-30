@@ -475,5 +475,72 @@
           });
       }
     </script>
+    <script>
+      const notifications = [
+        {
+          product: "Nike SB Dunk Low Travis Scott",
+          time: "3 seconds ago",
+          img: "img/product-img/1.jpg",
+        },
+        // Add more products if needed
+      ];
+
+      const names = [
+        "Mohamed Bo*****",
+        "Alice Jo*****",
+        "John Sm*****",
+        "Emma Br*****",
+        // Add more names if needed
+      ];
+
+      function getRandomName() {
+        return names[Math.floor(Math.random() * names.length)];
+      }
+
+      function showNotification() {
+        const container = document.getElementById("notification-container");
+        const notificationData =
+          notifications[Math.floor(Math.random() * notifications.length)];
+
+        const notification = document.createElement("div");
+        notification.className = "notification";
+
+        notification.innerHTML = `
+        <img src="${notificationData.img}" alt="Product">
+        <div class="content">
+            <h4>${getRandomName()} purchased</h4>
+            <p>${notificationData.product}</p>
+            <div class="verified">
+                <span>${notificationData.time}</span>
+            </div>
+        </div>
+        <span class="close-btn">&times;</span>
+    `;
+
+        container.appendChild(notification);
+
+        setTimeout(() => {
+          notification.classList.add("show");
+        }, 50);
+
+        setTimeout(() => {
+          notification.classList.remove("show");
+          setTimeout(() => {
+            container.removeChild(notification);
+          }, 300);
+        }, 3000);
+
+        notification
+          .querySelector(".close-btn")
+          .addEventListener("click", () => {
+            notification.classList.remove("show");
+            setTimeout(() => {
+              container.removeChild(notification);
+            }, 300);
+          });
+      }
+
+      setInterval(showNotification, 15000);
+    </script>
   </body>
 </html>
