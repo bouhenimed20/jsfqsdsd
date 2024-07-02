@@ -64,27 +64,6 @@
     max-width: 100%;
   }
 }
-/* Style for the sticky bar */
-.sticky-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  z-index: 1000; /* Ensures it stays on top */
-  text-decoration: none; /* Remove underline from link */
-}
-
-.sticky-bar:hover {
-  background-color: #ffffff;
-  color: black;
-  border-color: #000000;
-  border-radius: 4px;
-  box-shadow: #010101;
-  /* Darker background color on hover */
-}
 
 .buy-now-text {
   font-size: 18px;
@@ -216,4 +195,56 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #000;
+}
+
+#notification-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.notification img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+.notification .content {
+  flex: 1;
+}
+.notification .content h4 {
+  margin: 0;
+  font-size: 14px;
+}
+.notification .content p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: gray;
+}
+.notification .content .verified {
+  display: flex;
+  align-items: center;
+}
+.notification .content .verified img {
+  width: 12px;
+  height: auto;
+  margin-left: 5px;
+}
+.notification .close-btn {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.notification.show {
+  opacity: 1;
 }
