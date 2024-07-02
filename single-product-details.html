@@ -68,11 +68,16 @@
         <form
           class="cart-form clearfix"
           method="post"
-          action="https://script.google.com/macros/s/AKfycbyyYzQVWmHMBFLJ9ojy-mVqq5gnZoAPuI-jv3rS0hE06ve0d45NxU6tUGRlk9Qh-_Y5/exec"
+          action="https://script.google.com/macros/s/AKfycbz1nd6mpDiMrMGOukZlQsmlfU8bAiz7-pzqjRW9LjjVMRFHYlYUOljRsQaZxeb4119B/exec"
           onsubmit="handleFormSubmit(event)"
         >
           <div class="billing-info mt-20 mb-30">
             <div class="row">
+              <input
+                type="hidden"
+                name="product_name"
+                value="Nike SB Dunk Low Travis Scott"
+              />
               <div class="col-12 mb-3">
                 <label for="size">Taille:</label>
                 <div class="size-selector">
@@ -127,12 +132,6 @@
                 />
               </div>
             </div>
-            <!-- Hidden input for product name -->
-            <input
-              type="hidden"
-              name="product_name"
-              value="Nike SB Dunk Low Travis Scott"
-            />
 
             <div class="cart-fav-box d-flex align-items-center">
               <button
