@@ -9,6 +9,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Ozlo</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link rel="icon" href="img/core-img/favicon.png" />
     <link rel="stylesheet" href="css/core-style.css" />
     <link rel="stylesheet" href="style.css" />
@@ -255,17 +261,44 @@
 
     <section class="single_product_details_area d-flex align-items-center">
       <div class="single_product_desc clearfix">
-        <span>Nike</span>
-        <a>
-          <h2>Nike SB Dunk Low Travis Scott</h2>
-        </a>
-        <p class="product-price">
-          <span class="old-price">279.00dt</span> 229.00dt
-        </p>
-        <p class="product-desc">
-          Sku : CT5053-001 Release date : February 2020 Colorway :
-          BLACK/BLACK/PARACHUTE BEIGE/Petra BROWN Color : Beige/Multicolor
-        </p>
+        <div class="review-section">
+          <h2>CE QUE NOS CLIENTS DISENT SUR NOUS !</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="review">
+                  <div class="stars">
+                    <span>★★★★★</span>
+                  </div>
+                  <h3>Zitouni Ahmed</h3>
+                  <p>
+                    je suis très satisfait avec cette commande 👌 produit ya3mel
+                    lkif w très haute qualité, lproduit kima description f les
+                    pubs w ahsen ♥ ya3tikom saha et bonne continuation 🙏🙏
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <div class="stars">
+                    <span>★★★★★</span>
+                  </div>
+                  <h3>John Smith</h3>
+                  <p>
+                    Very satisfied with my purchase. The product matches the
+                    description perfectly and the customer service was great.
+                    Will definitely buy again!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
       </div>
       <div class="single_product_thumb clearfix">
         <div
@@ -541,6 +574,19 @@
       }
 
       setInterval(showNotification, 15000);
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
   </body>
 </html>

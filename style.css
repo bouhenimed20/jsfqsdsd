@@ -183,3 +183,38 @@
 .notification.show {
   opacity: 1;
 }
+.review-section {
+  text-align: center;
+  padding: 50px 0;
+}
+.review-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.swiper-container {
+  width: 80%;
+  margin: auto;
+}
+.review {
+  margin: 20px 0;
+}
+.stars {
+  color: #f5c518;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.swiper-slide h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+.swiper-slide p {
+  font-size: 1em;
+  color: #666;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+}
+.swiper-pagination-bullet-active {
+  background: #000;
+}
