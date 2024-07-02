@@ -199,9 +199,11 @@
   margin: 20px 0;
 }
 .stars {
-  color: #f5c518;
   font-size: 1.5em;
   margin-bottom: 10px;
+}
+.stars span {
+  color: gold; /* Change stars color to gold */
 }
 .swiper-slide h3 {
   margin: 10px 0;
